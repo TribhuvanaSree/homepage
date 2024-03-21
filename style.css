@@ -1,0 +1,139 @@
+/* Reset some default styles */
+
+body, ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Add background image to the body */
+body {
+    background-image: url('portfolio-1.jpg'); /* Replace 'background.jpg' with the path to your background image */
+    background-size: cover;
+    background-position: center;
+    font-family: serif, Helvetica, sans-serif; /* Specify a fallback font */
+}
+
+/* Styles for header, logo, and navigation */
+header {
+    padding: 10px;
+    height: 30%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.logo-container img {
+    height: 80px;
+}
+
+/* Styles for banner and slideshow */
+.banner {
+    padding: 20px;
+    margin: 20px 0;
+    
+}
+
+.banner h1 {
+    color: #FFF8E3; 
+    font-size: 70px;
+    font-family: serif;
+    text-align: center;
+}
+.banner p{
+    text-align: center;
+    color: #FFF8E3;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+.slideshow {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.slideshow img {
+    width: 30%;
+    height: auto;
+}
+
+/* Styles for scrolling news flash */
+.news-flash {
+    background-color: rgba(255, 255, 255, 0.3); /* Semi-transparent white background */
+    overflow: hidden;
+    font-size: small;
+    color: beige;
+}
+
+
+/* Styles for footer */
+footer {
+    background-color: rgba(255, 255, 255, 0.5); 
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.slider-frame{
+    overflow: hidden;
+    height: 800px;
+    width: 1200px;
+    margin-left: 360px;
+    margin-top: 20px;
+}
+
+/*---------- SLIDE ANIMATION --------------*/
+
+
+@keyframes slide_animation{
+    0% {left:0px;}
+    10% {left:0px;}
+    20% {left:1200px;}
+    30% {left:1200px;}
+    40% {left: 2400px;}
+    50% {left: 2400px;}
+    60% {left: 1200px;}
+    70% {left: 1200px;}
+    80% {left: 0px;}
+    90% {left: 0px;}
+    100% {left:0px;}
+}
+
+@-webkit-keyframes slide_animation{
+    0% {left:0px;}
+    10% {left:0px;}
+    20% {left:1200px;}
+    30% {left:1200px;}
+    40% {left: 2400px;}
+    50% {left: 2400px;}
+    60% {left: 1200px;}
+    70% {left: 1200px;}
+    80% {left: 0px;}
+    90% {left: 0px;}
+    100% {left:0px;}
+}
+
+.slide-images{
+    width: 3600px;
+    height: 800px;
+    margin: 0 0 0 -2400px;
+    position: relative;
+    -webkit-animation-name: slide_animation;
+    animation-name: slide_animation;
+    -webkit-animation-duration: 33s;
+    animation-duration: 33s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+    -webkit-animation-play-state: running;
+    animation-play-state: running;
+}
+
+.img-container{
+    height: 800px;
+    width: 1200px;
+    position: relative;
+    float: left;
+}
